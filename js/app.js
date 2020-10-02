@@ -9,4 +9,8 @@ let players = [
     ["43124345J", "Pepa", "Vivancos Leia", "692403829", "pleia@gmail.com", "12/12/1995", "ES9000246912501234567891", "BEG"]
 ];
 
-let lists = document.getElementById("lists");
+let bList = document.getElementById("beglist");
+let pList = document.getElementById("prolist");
+
+let test = document.createElement("p").innerHTML="ergtrhtn";
+document.body.appendChild(test);
