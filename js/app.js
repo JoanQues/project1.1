@@ -9,10 +9,6 @@ let players = [
     ["43124345J", "Pepa", "Vivancos Leia", "692403829", "pleia@gmail.com", "12/12/1995", "ES9000246912501234567891", "BEG"]
 ];
 
-
-let bList = document.querySelector('#beglist');
-let pList = document.querySelector("#prolist");
-
-for(i=0;i<players.length;i++){
-    let dni = players[i][0];
-};
+ function addPlayer(){
+        console.log("xd");
+}
