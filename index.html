@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
     <title>Padel</title>
 </head>
 <body>
@@ -15,46 +16,65 @@
                 <div>
                     <label for="dni">DNI</label>
                     <input name="dni" id="dni" type="text">
+                    <p id="edni"></p>
                 </div>
                 <div>  
                     <label for="name">Name</label>
                     <input name="name" id="name" type="text">
+                    <p id="name"></p>
+                    
                 </div>
                 <div>
-                    <label for="lastname">Last Name</label>
-                    <input name="lastname" id="lastname" type="text">
+                    <label for="suename">Last Name</label>
+                    <input name="surname" id="surname" type="text">
+                    <p id="esuername"></p>
                 </div>
                 <div>
                     <label for="phone">Phone Number</label>
                     <input name="phone" id="phone" type="text">
+                    <p id="ephone"></p>
                 </div>
                 <div>
                     <label for="email">Email</label>
-                    <input name="email" id="email" type="email">
+                    <input name="email" id="mail" type="email">
+                    <p id="eemail"></p>
                 </div>
                 <div>
                     <label for="date">Birthdate</label>
                     <input name="date" id="date" type="date">
+                    <p id="edate"></p>
                 </div>
                 <div>
                     <label for="bank">Bank acconunt</label>
-                    <input name="bank" id="bank" type="text">
+                    <input name="bank" id="iban" type="text">
+                    <p id="eiban"></p>
                 </div>
                 <div>
                     <label for="cat">Category</label>
                     <select name="Category" id="cat">
-                        <option value="Profesional">Profesional</option>
-                        <option value="Begginer">Begginer</option>
+                        <option value="PRO">Profesional</option>
+                        <option value="BEG">Begginer</option>
                     </select>
+                    <p id="ecat"></p>
                 </div>
                 <div>
-                    <input onclick="addPlayer" type="button" value="Add Player">
+                    <input id="add" type="button" value="Add Player">
+                </div>
+                <div>
+                    <p id="success"></p>
                 </div>
             </form>
+        </div>
+        <div>
         </div>
         <div id="beglist"></div>
         <div id="prolist"></div>
     </main>
-    <script type="module" src="js/app.js"></script>
+    <script type="module">
+        import addPlayer from './js/app.js';
+        let btn = document.querySelector("#add");
+        btn.addEventListener("click",addPlayer);
+   </script>
+   
 </body>
 </html>
