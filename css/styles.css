@@ -4,14 +4,6 @@ body{
 	font-family: 'Roboto', sans-serif;
 	background-color: #efefef;
 }
-h1.title-page{
-	font:bold 50px 'Titillium Web', sans-serif;
-	border-bottom:0px;
-	padding-left: 250px;
-	padding-top:60px;
-	background: url('../img/title-icon.png') no-repeat center left;
-	display:none;
-}
 h1{
 	font-family: 'Titillium Web', sans-serif;
 	border-bottom:dotted 4px #ccc;
@@ -26,25 +18,19 @@ h2{
 	padding-left:70px;
 }
 .player-col {
-	padding-left: 5px;
 	width:300;
 	background-color:#e6f7ff;
 	display: block;
 }
-#c_beginner_list, #c_professional_list{
+#beglist, #prolist{
 	width:47%;
 	border:dotted 2px #ccc;
 	padding:8px;
 	float:left;
 }
-#c_professional_list{
+#prolist{
 	float:right;
 }
-fieldset p {
-	float:left;
-	padding-left:10px;
-}
-
 .button-form{
 	text-decoration: none;
 	padding: 7px;
@@ -79,10 +65,14 @@ footer{
 	color: transparent;
 	text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
 }
-.camp label{
-	padding-left:5px;
-}
-.title-list{
-	width:50%;
+.list{
+	width: 20%;
 	float:left;
+	padding-top: 10px;
+}
+.error{
+	color: red;
+}
+.success{
+	color: green;
 }

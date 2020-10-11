@@ -14,6 +14,15 @@ let players = [
 export default function addPlayer(){
     let btn = document.querySelector("#add");
     btn.addEventListener("click",function(){
+        document.querySelector("#edni").innerHTML = "";
+        document.querySelector("#edate").innerHTML = "";
+        document.querySelector("#eemail").innerHTML = "";
+        document.querySelector("#ephone").innerHTML = "";
+        document.querySelector("#esurname").innerHTML = "";
+        document.querySelector("#ename").innerHTML = "";
+        document.querySelector("#eiban").innerHTML = "";
+        document.querySelector("#ecat").innerHTML = "";
+
         let dni = document.querySelector("#dni").value;
         let name = document.querySelector("#name").value;
         let surname = document.querySelector("#surname").value;
@@ -25,12 +34,17 @@ export default function addPlayer(){
         let iban = document.querySelector("#iban").value;
         let cat = document.querySelector("#cat").value;
         let validate = true;
-        if(!document.querySelector("#surname")){
-            document.querySelector("#esurname").innerHTML = "Error surname"
+        
+        if(surname == ""){
+            document.querySelector("#esurname").innerHTML="Surname empty"
             validate = false;
         }
-        if(!document.querySelector("#name")){
-            document.querySelector("#ename").innerHTML = "Error name"
+        if(name == ""){
+            document.querySelector("#ename").innerHTML ="Name empty"
+            validate = false;
+        }
+        if(iban == ""){
+            document.querySelector("#eiban").innerHTML ="Iban empty"
             validate = false;
         }
         if(!document.querySelector("#iban")){
@@ -65,10 +79,6 @@ export default function addPlayer(){
         if(validate){
             players.push([dni,name,surname,phone,mail,date,iban,cat])
             showList();
-            document.querySelector("#edni").innerHTML = "";
-            document.querySelector("#edate").innerHTML = "";
-            document.querySelector("#eemail").innerHTML = "";
-            document.querySelector("#ephone").innerHTML = "";
             document.querySelector("#success").innerHTML = "Player added successfully";
         }
         console.log(players);
@@ -90,6 +100,7 @@ function showList() {
     for(let i = 0; i < players.length; i++){
         let category = players[i][7];
         let div = document.createElement("div");
+        div.className ="player-col playerData";
         let pname = document.createElement("p");
         let pemail = document.createElement("p");
         let pcat = document.createElement("p");

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
     <title>Padel</title>
 </head>
@@ -12,60 +14,72 @@
     </header>
     <main>
         <div>
+            <h2>Add new player</h2>
+        </div>
+        <div>
             <form action="">
-                <div>
+                <div class="list">
                     <label for="dni">DNI</label>
                     <input name="dni" id="dni" type="text">
-                    <p id="edni"></p>
-                </div>
-                <div>  
-                    <label for="name">Name</label>
-                    <input name="name" id="name" type="text">
-                    <p id="name"></p>
                     
                 </div>
-                <div>
+                <div class="list">  
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text">
+                    
+                    
+                </div>
+                <div class="list">
                     <label for="suename">Last Name</label>
                     <input name="surname" id="surname" type="text">
-                    <p id="esuername"></p>
+                   
                 </div>
-                <div>
+                <div class="list">
                     <label for="phone">Phone Number</label>
                     <input name="phone" id="phone" type="text">
-                    <p id="ephone"></p>
+                    
                 </div>
-                <div>
+                <div class="list">
                     <label for="email">Email</label>
                     <input name="email" id="mail" type="email">
-                    <p id="eemail"></p>
+                    
                 </div>
-                <div>
+                <div class="list">
                     <label for="date">Birthdate</label>
                     <input name="date" id="date" type="date">
-                    <p id="edate"></p>
+                    
                 </div>
-                <div>
+                <div class="list">
                     <label for="bank">Bank acconunt</label>
                     <input name="bank" id="iban" type="text">
-                    <p id="eiban"></p>
+                    
                 </div>
-                <div>
+                <div class="list">
                     <label for="cat">Category</label>
                     <select name="Category" id="cat">
                         <option value="PRO">Profesional</option>
                         <option value="BEG">Begginer</option>
                     </select>
-                    <p id="ecat"></p>
+                   
+                </div>
+                <div >
+                    <input class="button-form" id="add" type="button" value="Add Player">
                 </div>
                 <div>
-                    <input id="add" type="button" value="Add Player">
-                </div>
-                <div>
-                    <p id="success"></p>
+                    <p class="error" id="ecat"></p>
+                    <p class="error" id="eiban"></p>
+                    <p class="error" id="edate"></p>
+                    <p class="error" id="eemail"></p>
+                    <p class="error" id="ephone"></p>
+                    <p class="error" id="esurname"></p>
+                    <p class="error" id="ename"></p>
+                    <p class="error" id="edni"></p>
+                    <p class="success" id="success"></p>
                 </div>
             </form>
         </div>
         <div>
+            <h2>Player list</h2>
         </div>
         <div id="beglist"></div>
         <div id="prolist"></div>
